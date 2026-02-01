@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Wireless Earbuds - Order Now</title>
+    <title>Premium T-Shirts - Order Now</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -72,162 +72,303 @@
             font-weight: 600;
         }
 
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
-            color: var(--white);
-            position: relative;
-            overflow: hidden;
+        /* Product Section */
+        .product-section {
+            padding: 60px 0;
+            background: var(--white);
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            top: -250px;
-            right: -100px;
-            border-radius: 50%;
-        }
-
-        .hero-content {
+        .product-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            position: relative;
+            gap: 80px;
+            align-items: start;
         }
 
-        .hero-text h1 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.2;
+        /* Left Side - Product Details */
+        .product-details {
+            padding: 20px 0;
+        }
+
+        .product-badge {
+            background: linear-gradient(135deg, var(--accent) 0%, #F97316 100%);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-block;
             margin-bottom: 20px;
         }
 
-        .hero-text .price {
-            font-size: 3rem;
+        .product-details h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 800;
-            margin: 20px 0;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .rating-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .product-price {
             display: flex;
             align-items: baseline;
-            gap: 10px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
 
-        .price .old-price {
+        .current-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .old-price {
             font-size: 1.5rem;
             text-decoration: line-through;
-            opacity: 0.6;
+            color: var(--text-light);
         }
 
-        .hero-text p {
-            font-size: 1.2rem;
-            opacity: 0.95;
+        .discount-badge {
+            background: #FEE2E2;
+            color: #DC2626;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
             margin-bottom: 30px;
         }
 
-        .features-list {
-            list-style: none;
-            margin: 30px 0;
+        /* Size Selector */
+        .option-group {
+            margin-bottom: 30px;
         }
 
-        .features-list li {
-            padding: 12px 0;
+        .option-label {
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .size-options {
             display: flex;
-            align-items: center;
             gap: 12px;
-            font-size: 1.1rem;
+            flex-wrap: wrap;
         }
 
-        .features-list li::before {
-            content: '✓';
-            background: rgba(255,255,255,0.2);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
+        .size-option {
+            width: 60px;
+            height: 50px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
         }
 
-        .hero-image {
+        .size-option:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .size-option.selected {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Color Selector */
+        .color-options {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 50px;
+            height: 50px;
+            border: 3px solid transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
             position: relative;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+        }
+
+        .color-option.selected {
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px var(--white), 0 0 0 4px var(--secondary);
+        }
+
+        .color-option.selected::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: var(--white);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .color-name {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Quantity Selector */
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .quantity-btn {
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .quantity-display {
+            font-size: 1.5rem;
+            font-weight: 700;
+            min-width: 60px;
             text-align: center;
         }
 
-        .product-image {
-            max-width: 100%;
-            height: auto;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
-            animation: float 3s ease-in-out infinite;
+        /* Add to Cart Button */
+        .btn-add-cart {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        .btn-add-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-add-cart:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Features */
+        .product-features {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--bg);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        /* Right Side - Product Image */
+        .product-image-container {
+            position: sticky;
+            top: 100px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            background: var(--bg);
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
 
         /* Order Form Section */
         .order-section {
             padding: 80px 0;
-            background: var(--white);
+            background: var(--bg);
         }
 
         .order-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .order-info h2 {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: var(--secondary);
-        }
-
-        .order-info p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-        }
-
-        .benefits {
-            margin: 40px 0;
-        }
-
-        .benefit-item {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            padding: 20px;
-            background: var(--bg);
-            border-radius: 12px;
-        }
-
-        .benefit-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-
-        .benefit-text h4 {
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--secondary);
-        }
-
-        .benefit-text p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        /* Order Form */
         .order-form-card {
             background: var(--white);
             padding: 40px;
@@ -241,28 +382,12 @@
             margin-bottom: 30px;
         }
 
-        .form-header h3 {
+        .form-header h2 {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 800;
             color: var(--secondary);
             margin-bottom: 10px;
-        }
-
-        .limited-offer {
-            background: linear-gradient(135deg, var(--accent) 0%, #F97316 100%);
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-weight: 700;
-            display: inline-block;
-            margin-bottom: 20px;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
         }
 
         .form-group {
@@ -300,37 +425,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
-        }
-
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .quantity-btn {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--border);
-            background: var(--white);
-            border-radius: 8px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .quantity-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .quantity-display {
-            font-size: 1.5rem;
-            font-weight: 700;
-            min-width: 60px;
-            text-align: center;
         }
 
         .order-summary {
@@ -381,17 +475,6 @@
             transform: none;
         }
 
-        .secure-checkout {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
         /* Success Message */
         .success-message {
             display: none;
@@ -422,7 +505,7 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
-            background: var(--bg);
+            background: var(--white);
         }
 
         .testimonials h2 {
@@ -441,13 +524,13 @@
         }
 
         .testimonial-card {
-            background: var(--white);
+            background: var(--bg);
             padding: 30px;
             border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        .stars {
+        .testimonial-stars {
             color: var(--accent);
             font-size: 1.2rem;
             margin-bottom: 15px;
@@ -473,22 +556,18 @@
 
         /* Responsive */
         @media (max-width: 968px) {
-            .hero-content,
-            .order-content {
+            .product-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
 
+            .product-image-container {
+                position: static;
+                order: -1;
+            }
+
             .form-row {
                 grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding: 60px 0;
-            }
-
-            .order-section {
-                padding: 60px 0;
             }
         }
 
@@ -508,6 +587,27 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        .scroll-arrow {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .scroll-arrow a {
+            background: var(--primary);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .scroll-arrow a:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -526,41 +626,126 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Product Section -->
+    <section class="product-section">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Premium Wireless Earbuds Pro</h1>
-                    <div class="price">
-                        <span class="old-price">$199</span>
-                        <span>$99</span>
+            <div class="product-content">
+                <!-- Left Side - Product Details -->
+                <div class="product-details">
+                    <span class="product-badge">🔥 Limited Time Offer</span>
+                    
+                    <h1>Premium Cotton T-Shirt</h1>
+                    
+                    <div class="product-rating">
+                        <div class="stars">★★★★★</div>
+                        <span class="rating-text">(2,547 reviews)</span>
                     </div>
-                    <p>Experience crystal-clear sound with active noise cancellation. Limited time 50% OFF!</p>
-                    <ul class="features-list">
-                        <li>Active Noise Cancellation</li>
-                        <li>30-Hour Battery Life</li>
-                        <li>Premium Sound Quality</li>
-                        <li>Fast Wireless Charging</li>
-                        <li>IPX7 Water Resistant</li>
-                    </ul>
+                    
+                    <div class="product-price">
+                        <span class="current-price">$29</span>
+                        <span class="old-price">$59</span>
+                        <span class="discount-badge">50% OFF</span>
+                    </div>
+                    
+                    <p class="product-description">
+                        Experience ultimate comfort with our premium 100% organic cotton t-shirt. 
+                        Designed for everyday wear, this soft and breathable shirt features a modern 
+                        fit that looks great on everyone. Perfect for casual outings, gym sessions, 
+                        or lounging at home.
+                    </p>
+
+                    <!-- Size Selection -->
+                    <div class="option-group">
+                        <label class="option-label">Select Size:</label>
+                        <div class="size-options">
+                            <button type="button" class="size-option" data-size="S" onclick="selectSize('S')">S</button>
+                            <button type="button" class="size-option" data-size="M" onclick="selectSize('M')">M</button>
+                            <button type="button" class="size-option selected" data-size="L" onclick="selectSize('L')">L</button>
+                            <button type="button" class="size-option" data-size="XL" onclick="selectSize('XL')">XL</button>
+                            <button type="button" class="size-option" data-size="XXL" onclick="selectSize('XXL')">XXL</button>
+                        </div>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="option-group">
+                        <label class="option-label">Select Color:</label>
+                        <div class="color-options">
+                            <button type="button" class="color-option selected" style="background: #000000;" data-color="Black" onclick="selectColor('Black', '#000000')"></button>
+                            <button type="button" class="color-option" style="background: #FFFFFF; border: 2px solid #E5E5E5;" data-color="White" onclick="selectColor('White', '#FFFFFF')"></button>
+                            <button type="button" class="color-option" style="background: #1E40AF;" data-color="Navy Blue" onclick="selectColor('Navy Blue', '#1E40AF')"></button>
+                            <button type="button" class="color-option" style="background: #DC2626;" data-color="Red" onclick="selectColor('Red', '#DC2626')"></button>
+                            <button type="button" class="color-option" style="background: #059669;" data-color="Green" onclick="selectColor('Green', '#059669')"></button>
+                            <button type="button" class="color-option" style="background: #9CA3AF;" data-color="Gray" onclick="selectColor('Gray', '#9CA3AF')"></button>
+                        </div>
+                        <p class="color-name" id="selectedColorName">Black</p>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="option-group">
+                        <label class="option-label">Quantity:</label>
+                        <div class="quantity-selector">
+                            <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">−</button>
+                            <span class="quantity-display" id="quantityDisplay">1</span>
+                            <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="btn-add-cart" onclick="scrollToCheckout()">
+                        🛒 Proceed to Checkout - $<span id="totalAmount">29</span>
+                    </button>
+
+                    <!-- Product Features -->
+                    <div class="product-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <span class="feature-text">100% Premium Organic Cotton</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚚</div>
+                            <span class="feature-text">Free Shipping on Orders Over $50</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">↩️</div>
+                            <span class="feature-text">30-Day Easy Returns</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🌍</div>
+                            <span class="feature-text">Eco-Friendly & Sustainable</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-image">
-                    <svg class="product-image" width="400" height="400" viewBox="0 0 400 400">
-                        <defs>
-                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#667EEA;stop-opacity:1" />
-                                <stop offset="100%" style="stop-color:#764BA2;stop-opacity:1" />
-                            </linearGradient>
-                        </defs>
-                        <ellipse cx="200" cy="200" rx="100" ry="120" fill="url(#grad1)" opacity="0.2"/>
-                        <circle cx="150" cy="180" r="60" fill="url(#grad1)"/>
-                        <circle cx="250" cy="180" r="60" fill="url(#grad1)"/>
-                        <rect x="190" y="220" width="20" height="60" rx="10" fill="url(#grad1)"/>
-                        <circle cx="150" cy="180" r="35" fill="rgba(255,255,255,0.3)"/>
-                        <circle cx="250" cy="180" r="35" fill="rgba(255,255,255,0.3)"/>
-                    </svg>
+
+                <!-- Right Side - Product Image -->
+                <div class="product-image-container">
+                    <div class="product-image">
+                        <!-- Replace this SVG with your actual product image -->
+                        <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="tshirtGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1F2937;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#374151;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- T-shirt shape -->
+                            <path d="M100,100 L90,150 L90,450 L310,450 L310,150 L300,100 L250,100 L250,130 L150,130 L150,100 Z" 
+                                  fill="url(#tshirtGrad)" stroke="#111827" stroke-width="3"/>
+                            <!-- Collar -->
+                            <ellipse cx="200" cy="100" rx="50" ry="20" fill="#374151"/>
+                            <!-- Sleeves -->
+                            <path d="M90,120 L40,180 L60,200 L90,150 Z" fill="url(#tshirtGrad)" stroke="#111827" stroke-width="2"/>
+                            <path d="M310,120 L360,180 L340,200 L310,150 Z" fill="url(#tshirtGrad)" stroke="#111827" stroke-width="2"/>
+                            <!-- Design element -->
+                            <text x="200" y="280" font-size="40" fill="#FFFFFF" text-anchor="middle" font-weight="bold">PREMIUM</text>
+                            <text x="200" y="320" font-size="24" fill="#9CA3AF" text-anchor="middle">Quality Wear</text>
+                        </svg>
+                        <!-- Use <img src="your-tshirt-image.jpg" alt="Premium T-Shirt"> for real image -->
+                    </div>
                 </div>
+            </div>
+
+            <div class="scroll-arrow">
+                <a href="#order">Complete Your Order Below ↓</a>
             </div>
         </div>
     </section>
@@ -569,46 +754,10 @@
     <section class="order-section" id="order">
         <div class="container">
             <div class="order-content">
-                <div class="order-info">
-                    <h2>Order Your Earbuds Today!</h2>
-                    <p>Fill out the form to complete your order. Fast shipping available worldwide.</p>
-                    
-                    <div class="benefits">
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🚚</div>
-                            <div class="benefit-text">
-                                <h4>Free Shipping</h4>
-                                <p>Free delivery on all orders over $50</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">🔒</div>
-                            <div class="benefit-text">
-                                <h4>Secure Payment</h4>
-                                <p>Your payment information is safe with us</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">↩️</div>
-                            <div class="benefit-text">
-                                <h4>30-Day Returns</h4>
-                                <p>Not satisfied? Return within 30 days</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <div class="benefit-icon">⚡</div>
-                            <div class="benefit-text">
-                                <h4>1-Year Warranty</h4>
-                                <p>Complete protection for your purchase</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <div class="order-form-card">
                     <div class="form-header">
-                        <div class="limited-offer">⏰ Limited Time: 50% OFF</div>
-                        <h3>Complete Your Order</h3>
+                        <h2>Shipping Information</h2>
+                        <p style="color: #64748B; margin-top: 10px;">Fill in your details to complete the order</p>
                     </div>
 
                     <div id="successMessage" class="success-message">
@@ -617,6 +766,14 @@
                     </div>
 
                     <form id="orderForm" name="orders">
+                        <!-- Hidden fields for product details -->
+                        <input type="hidden" id="selectedSize" name="size" value="L">
+                        <input type="hidden" id="selectedColor" name="color" value="Black">
+                        <input type="hidden" id="quantity" name="quantity" value="1">
+                        <input type="hidden" id="totalPrice" name="totalPrice" value="29">
+                        <input type="hidden" id="orderDate" name="orderDate">
+                        <input type="hidden" name="productName" value="Premium Cotton T-Shirt">
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
@@ -669,23 +826,18 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label>Quantity</label>
-                            <div class="quantity-selector">
-                                <button type="button" class="quantity-btn" onclick="changeQuantity(-1)">−</button>
-                                <span class="quantity-display" id="quantityDisplay">1</span>
-                                <button type="button" class="quantity-btn" onclick="changeQuantity(1)">+</button>
-                            </div>
-                            <input type="hidden" id="quantity" name="quantity" value="1">
-                        </div>
-
-                        <input type="hidden" id="totalPrice" name="totalPrice" value="99">
-                        <input type="hidden" id="orderDate" name="orderDate">
-
                         <div class="order-summary">
                             <div class="summary-row">
-                                <span>Price per unit:</span>
-                                <span>$99.00</span>
+                                <span>Product:</span>
+                                <span>Premium Cotton T-Shirt</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Size:</span>
+                                <span id="summarySize">L</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Color:</span>
+                                <span id="summaryColor">Black</span>
                             </div>
                             <div class="summary-row">
                                 <span>Quantity:</span>
@@ -697,20 +849,13 @@
                             </div>
                             <div class="summary-row total">
                                 <span>Total:</span>
-                                <span id="totalPriceDisplay">$99.00</span>
+                                <span id="totalPriceDisplay">$29.00</span>
                             </div>
                         </div>
 
                         <button type="submit" class="btn-order" id="submitBtn">
                             Place Order Now
                         </button>
-
-                        <div class="secure-checkout">
-                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
-                            </svg>
-                            Secure 256-bit SSL Encrypted Checkout
-                        </div>
                     </form>
                 </div>
             </div>
@@ -723,18 +868,18 @@
             <h2>What Our Customers Say</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Best earbuds I've ever owned! The sound quality is incredible and battery life is amazing. Highly recommend!"</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Best t-shirt I've ever bought! The quality is outstanding and it fits perfectly. Will definitely order more!"</p>
                     <p class="customer-name">- Sarah Johnson</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Worth every penny! The noise cancellation works perfectly for my daily commute. Love them!"</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Super soft and comfortable. The fabric quality is amazing and it doesn't shrink after washing. Highly recommend!"</p>
                     <p class="customer-name">- Michael Chen</p>
                 </div>
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Exceptional quality and fast shipping. These earbuds exceeded my expectations in every way."</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Love the fit and feel! Perfect for everyday wear. Great value for money. Will be buying in different colors!"</p>
                     <p class="customer-name">- Emma Davis</p>
                 </div>
             </div>
@@ -750,18 +895,56 @@
 
     <script>
         let quantity = 1;
-        const pricePerUnit = 99;
+        let selectedSize = 'L';
+        let selectedColor = 'Black';
+        const pricePerUnit = 29;
 
-        // REPLACE THIS URL WITH YOUR DEPLOYED SCRIPT URL FROM STEP 3
+        // REPLACE THIS URL WITH YOUR DEPLOYED SCRIPT URL
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxpEZZG8Y3AO-VhNX13zgUDe7w_M86PbtFg2fIbKraKynFvMuXEAd3UM741GbN3N5Q1/exec';
+
+        function selectSize(size) {
+            selectedSize = size;
+            document.getElementById('selectedSize').value = size;
+            document.getElementById('summarySize').textContent = size;
+            
+            // Update UI
+            document.querySelectorAll('.size-option').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.getAttribute('data-size') === size) {
+                    btn.classList.add('selected');
+                }
+            });
+        }
+
+        function selectColor(colorName, colorCode) {
+            selectedColor = colorName;
+            document.getElementById('selectedColor').value = colorName;
+            document.getElementById('selectedColorName').textContent = colorName;
+            document.getElementById('summaryColor').textContent = colorName;
+            
+            // Update UI
+            document.querySelectorAll('.color-option').forEach(btn => {
+                btn.classList.remove('selected');
+                if (btn.getAttribute('data-color') === colorName) {
+                    btn.classList.add('selected');
+                }
+            });
+        }
 
         function changeQuantity(change) {
             quantity = Math.max(1, Math.min(10, quantity + change));
             document.getElementById('quantityDisplay').textContent = quantity;
             document.getElementById('summaryQuantity').textContent = quantity;
-            document.getElementById('totalPriceDisplay').textContent = '$' + (quantity * pricePerUnit).toFixed(2);
             document.getElementById('quantity').value = quantity;
-            document.getElementById('totalPrice').value = quantity * pricePerUnit;
+            
+            const total = quantity * pricePerUnit;
+            document.getElementById('totalAmount').textContent = total;
+            document.getElementById('totalPriceDisplay').textContent = '$' + total.toFixed(2);
+            document.getElementById('totalPrice').value = total;
+        }
+
+        function scrollToCheckout() {
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
         }
 
         document.getElementById('orderForm').addEventListener('submit', async function(e) {
@@ -791,8 +974,14 @@
                     // Show success message
                     document.getElementById('successMessage').classList.add('show');
                     this.reset();
+                    
+                    // Reset to defaults
                     quantity = 1;
+                    selectedSize = 'L';
+                    selectedColor = 'Black';
                     changeQuantity(0);
+                    selectSize('L');
+                    selectColor('Black', '#000000');
 
                     // Scroll to success message
                     document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
@@ -813,7 +1002,7 @@
             }
         });
 
-        // Smooth scroll for order button
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
